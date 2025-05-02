@@ -1,0 +1,8 @@
+-19.73598, -40.65625    / Sao Roque do Canaa (4)
+-22.88331, -43.10337    / Niteroi (8-9)
+-17.25197, -40.57428    / Umburatiba (3)
+-20.37432, -40.34832    / Vale Encantando (7)
+-20.27318, -40.39797    / Porto de Cariacica (6)
+-20.10834, -40.18358    / Praia de Capuaba (5)
+-18.58687, -41.64638    / Sao Sebastiao do Barroso (2)
+-17.77943, -43.77500    / Parque Nacional das Sempre-Vivas (1)
