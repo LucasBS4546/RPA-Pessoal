@@ -9,6 +9,13 @@ def main():
     places = []
     data = []
 
+    read_input_file(places)
+
+    get_data(data, places)
+
+    save_output_file(data)
+
+def read_input_file(places):
     with open('places.txt', 'r') as file:
         for line in file:
             contents = line.split("/")
@@ -24,7 +31,7 @@ def main():
                 'name': place
             })
 
-
+def get_data(data, places):
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         context = browser.new_context()
@@ -54,7 +61,7 @@ def main():
 
             data.append(data_item)
 
-
+def save_output_file(data):
     basedir = os.path.abspath(os.path.dirname(__file__))
     out_path = os.path.join(basedir, f"output_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv")
 
