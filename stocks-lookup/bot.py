@@ -14,7 +14,7 @@ import os
 class LookupStock:
     def __init__(self):
         self.chrome_options = Options()
-        self.chrome_options.add_argument("--log-level=3")  # Suppresses most logs (INFO, WARNING, etc.)
+        self.chrome_options.add_argument("--log-level=3")
         self.service = Service(log_path='NUL')
         self.basedir = os.path.abspath(os.path.dirname(__file__))
         self.stocks = []
@@ -62,7 +62,10 @@ class LookupStock:
                 print(f"- [{datetime.now().strftime('%Y/%m/%d %H:%M:%S')}] Saving stocks data...")
                 self.__save_stocks_data()
                 print(f"+ [{datetime.now().strftime('%Y/%m/%d %H:%M:%S')}] Done saving stocks data")
+
+                print('Entering sleep mode...\n\n')
                 time.sleep(interval)
+                print('End of sleep')
         except KeyboardInterrupt:
             return
 
@@ -158,7 +161,7 @@ class LookupStock:
             plt.xlabel("Time")
             plt.ylabel("Stock Price")
             plt.title(f"{symbol} Price Over Time")
-            plt.ylim(min(prices) - 1, max(prices) + 1)
+            plt.ylim(min(prices) - 0.05, max(prices) + 0.05)
 
             graph_path = os.path.join(self.basedir, "graphs", f"{symbol}.png")
             plt.savefig(graph_path)
@@ -174,7 +177,7 @@ if __name__ == '__main__':
     stock_bot.clear_history()
     stock_bot.add_stocks_to_track(stocks)
 
-    stock_bot.collect_data_loop(interval=300)
+    stock_bot.collect_data_loop(interval=30)
 
     stock_bot.generate_results_graphs()
         
