@@ -2,6 +2,7 @@
 rpachallenge.com e afins
 
 ## Fazer bot csgoskins + cronjob
+## Fazer bot diminuir dias do nome
 
 ### 1. **E-commerce Price Tracking and Automation**
 
