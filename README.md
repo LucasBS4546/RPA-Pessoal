@@ -1,6 +1,8 @@
 # RPA-Pessoal
 rpachallenge.com e afins
 
+## Fazer bot csgoskins + cronjob
+
 ### 1. **E-commerce Price Tracking and Automation**
 
 * **Tools:** Selenium/Playwright, pandas
